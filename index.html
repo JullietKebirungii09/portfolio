@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">My Work </a></li>
+                    <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+            <div id="About">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1"></div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p> Hi my name is Kebirungi Juliet and currently a student at ISBAT University City campus
+                                doing a Diploma in Software Engineering. I'm passionate about programming, website design, UI design among others
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                                <p class="tab-links"  onclick="opentab('education')"> Education</p>
+                                <p class="tab-links"  onclick="opentab('experience')"> Experience</p>
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>UI/UX</span><br> Designing App <br>interfaces</li>
+                                    <li><span>Web Development</span><br>Web app development</li>
+                                    <li><span>App Development</span><br> Building Android apps</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2024-Current</span><br> ISBAT University</li>
+                                    <li><span>2022-2023</span><br>A-level Kyambogo College</li>
+                                    <li><span>2017-2021</span><br>O-Level Trinity College Nabbingo</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                     <li><span>2025</span><br>UI/UX Design </li>
+                                    <li><span>2024</span><br>Web Designing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title"> My Services</h1>
+            <div class="services-List">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>I create custom websites that blend aesthetics with functionality 
+                        designed to reflect your brand, engage your audience, and deliver results.</p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>Designing intuitive, engaging experiences that feel effortless.
+I                      specialize in crafting digital interfaces that are not only beautiful but deeply user centered.
+                        My UI/UX design process blends empathy, research, and creativity to ensure every interaction feels natural and purposeful.
+                        </p>
+                        <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>App Design</h2>
+                    <p>I design apps that are easy to use, visually appealing, and built to support your business goals.
+                         From layout to user flow, every screen is crafted to help people navigate smoothly and stay engaged.</p>
+                        <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
